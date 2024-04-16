@@ -35,3 +35,9 @@ env.bak/
 venv.bak/
 
 db.mysql
+
+# exclude everything
+somefolder/*
+
+#exception to the rule
+!somefolder/.gitkeep
