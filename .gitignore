@@ -37,7 +37,7 @@ venv.bak/
 db.mysql
 
 # exclude everything
-media/*
+somefolder/*
 
 #exception to the rule
-!media/.gitkeep
+!somefolder/.gitkeep
