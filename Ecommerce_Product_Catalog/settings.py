@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'django_quill',
+    'solo',
 
     'home',
     'store',

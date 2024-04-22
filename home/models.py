@@ -1,20 +1,9 @@
 from django.db import models
 from django_quill.fields import QuillField
-
-# Create your models here.
-
-
-class SingletonModel(models.Model):
-
-    def save(self, *args, **kwargs):
-        self.pk = 1
-        super().save(*args, **kwargs)
-
-    class Meta:
-        abstract = True
+from solo.models import SingletonModel
 
 
-class Feature(models.Model):
+class Feature(SingletonModel):
     title = models.CharField(max_length=255)
     description = models.TextField()
 
@@ -54,7 +43,7 @@ class Footer(SingletonModel):
         return self.title
 
 
-class SocialMedia(models.Model):
+class SocialMedia(SingletonModel):
     name = models.CharField(max_length=50)
     icon_image = models.ImageField(upload_to='store/images', null=True, blank=True)
     url = models.URLField()
